@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il progetto — L'archivio ritrovato</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background-color:#c8a87a;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(0,0,0,0.04) 40px,rgba(0,0,0,0.04) 41px),
+    repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(0,0,0,0.04) 40px,rgba(0,0,0,0.04) 41px);
+  font-family:'DM Mono',monospace;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(200,168,122,0.96);border-bottom:1px solid #a8885a;padding:.7rem 5vw;display:flex;justify-content:space-between;align-items:center}
+.nav-brand{font-family:'Playfair Display',serif;font-size:.9rem;font-style:italic;color:#1a1814;text-decoration:none}
+.nav-back{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#4a3420;text-decoration:none;transition:color .2s}
+.nav-back:hover{color:#8b3a1c}
+
+/* TAVOLO / RIPIANO — sfondo legno */
+.table{
+  position:relative;
+  width:100%;
+  padding:3vw;
+  min-height:100vh;
+}
+
+/* SCATOLA aperta vista dall'alto */
+.box-open{
+  position:relative;
+  width:min(700px,92vw);
+  margin:0 auto;
+  z-index:10;
+}
+
+/* Bordo esterno scatola — il cartone visto dall'alto */
+.box-outer{
+  background:#2c1810;
+  padding:18px;
+  box-shadow:
+    8px 8px 0 rgba(0,0,0,0.25),
+    16px 16px 0 rgba(0,0,0,0.12);
+  position:relative;
+}
+
+/* Striscia laterale sinistra — vista dall'alto del bordo */
+.box-outer::before{
+  content:'';
+  position:absolute;
+  top:8px;bottom:-8px;right:-8px;
+  width:8px;
+  background:linear-gradient(to bottom, #1a0e08, #3d2418);
+}
+/* Striscia inferiore */
+.box-outer::after{
+  content:'';
+  position:absolute;
+  bottom:-8px;left:8px;right:0;
+  height:8px;
+  background:linear-gradient(to right, #1a0e08, #3d2418);
+}
+
+/* Interno della scatola */
+.box-inner{
+  background:#faf6ed;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Texture interna */
+.box-inner::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(200,184,144,0.15) 24px,rgba(200,184,144,0.15) 25px);
+  pointer-events:none;
+  z-index:0;
+}
+
+.box-inner-content{
+  padding:2.5rem 2.8rem;
+  position:relative;
+  z-index:1;
+}
+
+/* Header con nome gioco stampato */
+.game-header{
+  border-bottom:3px solid #2c1810;
+  padding-bottom:1.2rem;
+  margin-bottom:2rem;
+}
+.game-eyebrow{
+  font-size:9px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:#8a7a6a;
+  margin-bottom:.5rem;
+}
+.game-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.8rem,5vw,3.2rem);
+  font-weight:700;
+  color:#2c1810;
+  line-height:1.05;
+}
+.game-title em{
+  font-style:italic;
+  color:#8b3a1c;
+  display:block;
+  font-size:.75em;
+  font-weight:400;
+  margin-top:.2rem;
+}
+
+/* Sezioni come parti del regolamento */
+.section{
+  margin-bottom:2rem;
+}
+.section-label{
+  font-size:8px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:#8b3a1c;
+  border-left:2px solid #8b3a1c;
+  padding-left:.6rem;
+  margin-bottom:.8rem;
+}
+.section p{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(.9rem,1.3vw,1.05rem);
+  line-height:1.85;
+  color:#2c1810;
+}
+.section p+p{
+  margin-top:.9rem;
+}
+
+/* Come funziona — box highlight */
+.how-box{
+  background:#f5f0e8;
+  border:1px solid #c8b890;
+  padding:1.2rem 1.4rem;
+  margin-top:1rem;
+}
+.how-box p{
+  font-size:12px;
+  line-height:1.9;
+  color:#4a3420;
+}
+
+/* Programma serate */
+.serate{
+  margin-bottom:2rem;
+}
+.serata-row{
+  display:grid;
+  grid-template-columns:90px 1fr;
+  gap:1rem;
+  padding:.9rem 0;
+  border-top:1px solid #c8b890;
+  align-items:start;
+}
+.serata-row:last-child{border-bottom:1px solid #c8b890}
+.serata-data{
+  font-size:10px;
+  letter-spacing:.06em;
+  color:#8a7a6a;
+  line-height:1.6;
+}
+.serata-data strong{
+  display:block;
+  font-family:'Playfair Display',serif;
+  font-size:1.3rem;
+  font-weight:400;
+  color:#2c1810;
+  letter-spacing:0;
+  line-height:1;
+}
+.serata-tema{
+  font-size:9px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:#8a7a6a;
+  margin-bottom:.2rem;
+}
+.serata-titolo{
+  font-family:'Playfair Display',serif;
+  font-size:1rem;
+  color:#2c1810;
+}
+.serata-titolo em{color:#8b3a1c;font-style:italic}
+.serata-desc{
+  font-size:11px;
+  color:#6a5a4a;
+  line-height:1.75;
+  margin-top:.3rem;
+}
+
+/* Crediti — in fondo come stampa sul cartone */
+.credits{
+  margin-top:2rem;
+  padding-top:1.4rem;
+  border-top:2px dashed #c8b890;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  flex-wrap:wrap;
+  gap:1rem;
+}
+.credits-text{
+  font-size:9px;
+  letter-spacing:.08em;
+  color:#8a7a6a;
+  line-height:2;
+}
+.credits-badge{
+  font-family:'Playfair Display',serif;
+  font-size:.8rem;
+  font-style:italic;
+  color:#4a3420;
+  text-align:right;
+  line-height:1.8;
+}
+
+/* ── OGGETTI SPARSI SUL TAVOLO attorno alla scatola ── */
+.objects-layer{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:1;
+  overflow:hidden;
+}
+
+@media(max-width:600px){
+  .box-inner-content{padding:1.4rem}
+  .serata-row{grid-template-columns:70px 1fr}
+  .objects-layer{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- OGGETTI VISTI DALL'ALTO attorno alla scatola -->
+<div class="objects-layer">
+<svg width="100%" height="100%" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- SINISTRA -->
+
+  <!-- scatola vista dall'alto sinistra in alto -->
+  <rect x="30" y="60" width="120" height="90" fill="#3b82c4" transform="rotate(-12,90,105)"/>
+  <rect x="34" y="64" width="112" height="14" fill="#2c6296" transform="rotate(-12,90,105)"/>
+  <text x="90" y="100" font-family="Courier New" font-size="9" fill="#fdfaf4" text-anchor="middle" transform="rotate(-12,90,105)" letter-spacing="1">GIOCO</text>
+
+  <!-- dado grande sinistra -->
+  <rect x="40" y="220" width="60" height="60" rx="8" fill="#fdfaf4" stroke="#1a1a1a" stroke-width="1.5" transform="rotate(15,70,250)"/>
+  <circle cx="55" cy="235" r="5" fill="#1a1a1a" transform="rotate(15,70,250)"/>
+  <circle cx="85" cy="235" r="5" fill="#1a1a1a" transform="rotate(15,70,250)"/>
+  <circle cx="55" cy="265" r="5" fill="#1a1a1a" transform="rotate(15,70,250)"/>
+  <circle cx="85" cy="265" r="5" fill="#1a1a1a" transform="rotate(15,70,250)"/>
+  <circle cx="70" cy="250" r="5" fill="#1a1a1a" transform="rotate(15,70,250)"/>
+
+  <!-- pedina vista dall'alto — cerchio con croce -->
+  <circle cx="110" cy="380" r="22" fill="#c0392b"/>
+  <circle cx="110" cy="380" r="14" fill="#962d22"/>
+  <line x1="100" y1="380" x2="120" y2="380" stroke="#fdfaf4" stroke-width="2"/>
+  <line x1="110" y1="370" x2="110" y2="390" stroke="#fdfaf4" stroke-width="2"/>
+
+  <!-- carta da gioco -->
+  <rect x="20" y="450" width="70" height="100" rx="4" fill="#fdfaf4" stroke="#c8b890" stroke-width="1.5" transform="rotate(-8,55,500)"/>
+  <rect x="26" y="456" width="58" height="88" rx="2" fill="none" stroke="#c8b890" stroke-width="1" transform="rotate(-8,55,500)"/>
+  <text x="55" y="508" font-family="Courier New" font-size="28" fill="#c0392b" text-anchor="middle" transform="rotate(-8,55,500)">♥</text>
+  <text x="28" y="472" font-family="Courier New" font-size="11" fill="#c0392b" transform="rotate(-8,55,500)">A</text>
+
+  <!-- tessera esagonale -->
+  <polygon points="160,560 186,546 212,560 212,588 186,602 160,588" fill="#e8b84b" transform="rotate(20,186,574)"/>
+  <polygon points="170,566 186,556 202,566 202,582 186,592 170,582" fill="#c0742a" transform="rotate(20,186,574)"/>
+
+  <!-- moneta -->
+  <circle cx="80" cy="650" r="28" fill="#b8922a"/>
+  <circle cx="80" cy="650" r="22" fill="none" stroke="#a07820" stroke-width="2"/>
+  <text x="80" y="656" font-family="Courier New" font-size="14" fill="#f5e090" text-anchor="middle">★</text>
+
+  <!-- scatolina piccola in basso sinistra -->
+  <rect x="140" y="720" width="80" height="60" fill="#e74c3c" transform="rotate(8,180,750)"/>
+  <rect x="144" y="724" width="72" height="12" fill="#b53c2e" transform="rotate(8,180,750)"/>
+
+  <!-- DESTRA -->
+
+  <!-- scatola grande destra in alto -->
+  <rect x="1240" y="40" width="130" height="100" fill="#8e44ad" transform="rotate(10,1305,90)"/>
+  <rect x="1244" y="44" width="122" height="16" fill="#6c2f8a" transform="rotate(10,1305,90)"/>
+  <text x="1305" y="98" font-family="Courier New" font-size="9" fill="#fdfaf4" text-anchor="middle" transform="rotate(10,1305,90)" letter-spacing="1">ARCHIVIO</text>
+
+  <!-- dado rosso destra -->
+  <rect x="1290" y="200" width="55" height="55" rx="7" fill="#c0392b" transform="rotate(-18,1317,227)"/>
+  <circle cx="1303" cy="213" r="4.5" fill="#fdfaf4" transform="rotate(-18,1317,227)"/>
+  <circle cx="1331" cy="241" r="4.5" fill="#fdfaf4" transform="rotate(-18,1317,227)"/>
+
+  <!-- meeple visto dall'alto -->
+  <ellipse cx="1340" cy="370" rx="18" ry="18" fill="#27ae60"/>
+  <ellipse cx="1340" cy="370" rx="10" ry="10" fill="#1d7a42"/>
+
+  <!-- carta da gioco destra -->
+  <rect x="1300" y="440" width="70" height="100" rx="4" fill="#fdfaf4" stroke="#c8b890" stroke-width="1.5" transform="rotate(12,1335,490)"/>
+  <rect x="1306" y="446" width="58" height="88" rx="2" fill="none" stroke="#c8b890" stroke-width="1" transform="rotate(12,1335,490)"/>
+  <text x="1335" y="498" font-family="Courier New" font-size="28" fill="#2c3e50" text-anchor="middle" transform="rotate(12,1335,490)">♠</text>
+  <text x="1308" y="462" font-family="Courier New" font-size="11" fill="#2c3e50" transform="rotate(12,1335,490)">K</text>
+
+  <!-- tessera domino -->
+  <rect x="1260" y="580" width="40" height="80" rx="4" fill="#fdfaf4" stroke="#1a1a1a" stroke-width="1.5" transform="rotate(-6,1280,620)"/>
+  <line x1="1260" y1="620" x2="1300" y2="620" stroke="#1a1a1a" stroke-width="1" transform="rotate(-6,1280,620)"/>
+  <circle cx="1270" cy="600" r="4" fill="#1a1a1a" transform="rotate(-6,1280,620)"/>
+  <circle cx="1290" cy="600" r="4" fill="#1a1a1a" transform="rotate(-6,1280,620)"/>
+  <circle cx="1280" cy="638" r="4" fill="#1a1a1a" transform="rotate(-6,1280,620)"/>
+
+  <!-- birillo -->
+  <ellipse cx="1360" cy="690" rx="16" ry="24" fill="#fdfaf4" stroke="#c8b890" stroke-width="1.5"/>
+  <ellipse cx="1360" cy="675" rx="10" ry="10" fill="#fdfaf4" stroke="#c8b890" stroke-width="1.5"/>
+  <rect x="1352" y="682" width="16" height="5" fill="#c0392b"/>
+
+  <!-- moneta destra -->
+  <circle cx="1330" cy="800" r="24" fill="#b8922a"/>
+  <circle cx="1330" cy="800" r="18" fill="none" stroke="#a07820" stroke-width="2"/>
+  <text x="1330" y="806" font-family="Courier New" font-size="12" fill="#f5e090" text-anchor="middle">★</text>
+
+  <!-- scatolina piccola in alto centro-destra -->
+  <rect x="1100" y="30" width="70" height="52" fill="#1abc9c" transform="rotate(-15,1135,56)"/>
+  <rect x="1104" y="34" width="62" height="10" fill="#13937a" transform="rotate(-15,1135,56)"/>
+
+  <!-- pallina in basso centro -->
+  <circle cx="700" cy="860" r="30" fill="#e74c3c"/>
+  <ellipse cx="690" cy="852" rx="8" ry="5" fill="rgba(255,255,255,0.25)" transform="rotate(-30,690,852)"/>
+
+  <!-- clessidra in basso sinistra -->
+  <polygon points="200,800 260,800 230,840" fill="none" stroke="#4a3420" stroke-width="2"/>
+  <polygon points="200,880 260,880 230,840" fill="none" stroke="#4a3420" stroke-width="2"/>
+  <polygon points="214,804 246,804 230,834" fill="#e8b84b"/>
+  <line x1="196" y1="798" x2="264" y2="798" stroke="#4a3420" stroke-width="3"/>
+  <line x1="196" y1="882" x2="264" y2="882" stroke="#4a3420" stroke-width="3"/>
+
+  <!-- dado verde in basso destra -->
+  <rect x="1100" y="800" width="65" height="65" rx="9" fill="#27ae60" transform="rotate(22,1132,832)"/>
+  <circle cx="1115" cy="815" r="5" fill="#fdfaf4" transform="rotate(22,1132,832)"/>
+  <circle cx="1149" cy="815" r="5" fill="#fdfaf4" transform="rotate(22,1132,832)"/>
+  <circle cx="1132" cy="832" r="5" fill="#fdfaf4" transform="rotate(22,1132,832)"/>
+  <circle cx="1115" cy="849" r="5" fill="#fdfaf4" transform="rotate(22,1132,832)"/>
+  <circle cx="1149" cy="849" r="5" fill="#fdfaf4" transform="rotate(22,1132,832)"/>
+
+</svg>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-brand">L'archivio ritrovato</a>
+  <a href="index.html" class="nav-back">← torna all'archivio</a>
+</nav>
+
+<div class="table">
+  <div class="box-open">
+    <div class="box-outer">
+      <div class="box-inner">
+        <div class="box-inner-content">
+
+          <div class="game-header">
+            <p class="game-eyebrow">ADI Design Museum · Milano · luglio–settembre 2026</p>
+            <h1 class="game-title">
+              Pop-up Museum
+              <em>L'archivio ritrovato</em>
+            </h1>
+          </div>
+
+          <div class="section">
+            <p class="section-label">Il progetto</p>
+            <p>Il gioco da tavolo è un oggetto progettato. Ha una grafica, dei materiali, una storia editoriale e culturale. È un documento del suo tempo — e come tale appartiene al design.</p>
+            <p>L'archivio ritrovato nasce da una scoperta: un patrimonio straordinario dell'Editrice Giochi — giochi, prototipi, corrispondenze, documenti — che sembrava perduto e che Spartaco Albertarelli ha ritrovato, recuperato e portato alla luce. Per la prima volta, questo archivio diventa accessibile al pubblico nella sede naturale dell'ADI Design Museum di Milano.</p>
+          </div>
+
+          <div class="section">
+            <p class="section-label">Come funziona</p>
+            <div class="how-box">
+              <p>Gli ospiti arrivano e trovano tavoli allestiti con i giochi del tema della serata, da sfogliare, aprire, giocare. Un secondo set di tavoli ospita materiali d'archivio originali consultabili liberamente: cartelline, corrispondenze, documenti.</p>
+              <p>Alle 18.30 Spartaco Albertarelli guida una conversazione sul tema della serata. Poi si gioca, si esplora, si parla. Ingresso libero. Ogni lunedì, dalle 18 alle 21.</p>
+            </div>
+          </div>
+
+          <div class="section serate">
+            <p class="section-label">Il programma — cinque serate</p>
+            <div class="serata-row">
+              <div class="serata-data"><strong>6</strong>Luglio 2026</div>
+              <div>
+                <p class="serata-tema">Il calcio</p>
+                <p class="serata-titolo">Le <em>plance</em></p>
+                <p class="serata-desc">La plancia come mappa, come territorio, come sistema di regole visive. Con Subbuteo e tutto il filone dei giochi sportivi italiani.</p>
+              </div>
+            </div>
+            <div class="serata-row">
+              <div class="serata-data"><strong>13</strong>Luglio 2026</div>
+              <div>
+                <p class="serata-tema">La televisione</p>
+                <p class="serata-titolo">Identità <em>visiva</em></p>
+                <p class="serata-desc">Come si costruisce l'identità visiva di un gioco a partire da un'immagine già nota a tutti. Con Rischiatutto come protagonista.</p>
+              </div>
+            </div>
+            <div class="serata-row">
+              <div class="serata-data"><strong>20</strong>Luglio 2026</div>
+              <div>
+                <p class="serata-tema">Le grandi licenze</p>
+                <p class="serata-titolo">Il <em>packaging</em></p>
+                <p class="serata-desc">La scatola come promessa, il packaging come forma di seduzione. Disney, Warner, Rai, Fininvest.</p>
+              </div>
+            </div>
+            <div class="serata-row">
+              <div class="serata-data"><strong>27</strong>Luglio 2026</div>
+              <div>
+                <p class="serata-tema">I prototipi</p>
+                <p class="serata-titolo">Il <em>processo</em></p>
+                <p class="serata-desc">I prototipi inediti di Alex Randolph, uno dei più grandi game designer della storia, mai mostrati al pubblico.</p>
+              </div>
+            </div>
+            <div class="serata-row">
+              <div class="serata-data"><strong>22</strong>Settembre 2026</div>
+              <div>
+                <p class="serata-tema">I giochi di guerra</p>
+                <p class="serata-titolo">Le <em>cartografie</em></p>
+                <p class="serata-desc">Dagli scacchi ai wargame, dal Risiko ai giochi di simulazione storica. In collaborazione con Spin Master.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="credits">
+            <div class="credits-text">
+              Un progetto di Kaleidos Games<br>
+              con ADI Design Museum e ACME<br>
+              Accademia di Belle Arti
+            </div>
+            <div class="credits-badge">
+              Spartaco Albertarelli<br>
+              Stefano Mirti<br>
+              Luca Carannante
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
