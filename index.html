@@ -20,9 +20,11 @@ body{
 .card-link{cursor:pointer;transition:opacity .15s}
 .card-link:hover{opacity:.9}
 
+
 @media(max-width:680px){
   body{overflow-x:auto;}
-  .shelf-wrap{overflow-x:auto;}
+  .shelf-wrap{overflow-x:auto;width:100%;}
+  .shelf-wrap svg{width:680px;min-width:680px;}
 }
 </style>
 </head>
@@ -587,20 +589,5 @@ body{
 </svg>
 </div>
 
-<script>
-function adjustViewBox(){
-  var svg = document.querySelector('.shelf-wrap svg');
-  if(!svg) return;
-  if(window.innerWidth <= 480){
-    svg.setAttribute('viewBox','0 0 340 1400');
-  } else if(window.innerWidth <= 680){
-    svg.setAttribute('viewBox','0 0 460 1400');
-  } else {
-    svg.setAttribute('viewBox','0 0 680 1400');
-  }
-}
-adjustViewBox();
-window.addEventListener('resize', adjustViewBox);
-</script>
 </body>
 </html>
