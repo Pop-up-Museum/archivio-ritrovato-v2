@@ -19,6 +19,693 @@ body{
 .shelf-wrap{width:100%;overflow:hidden}
 .card-link{cursor:pointer;transition:opacity .15s}
 .card-link:hover{opacity:.9}
+/* MOBILE NAV */
+.mobile-nav{display:none}
+@media(max-width:680px){
+  .mobile-nav{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    padding:16px;
+    position:relative;
+    z-index:10;
+    background:rgba(245,240,232,0.96);
+    border-bottom:1px solid #c8bfa8;
+  }
+  .mobile-nav-title{
+    font-family:'Playfair Display',serif;
+    font-size:1.4rem;
+    font-style:italic;
+    color:#1a1814;
+    margin-bottom:4px;
+    text-align:center;
+  }
+  .mobile-nav-sub{
+    font-size:9px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:#8b3a1c;
+    text-align:center;
+    margin-bottom:8px;
+  }
+  .mobile-btn{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 16px;
+    background:#faf6ed;
+    border:1px solid #c8b890;
+    text-decoration:none;
+    cursor:pointer;
+  }
+  .mobile-btn-left{
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+  }
+  .mobile-btn-tema{
+    font-size:8px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:#8b3a1c;
+  }
+  .mobile-btn-titolo{
+    font-family:'Playfair Display',serif;
+    font-size:1rem;
+    font-style:italic;
+    color:#1a1814;
+  }
+  .mobile-btn-arrow{
+    font-family:'Courier New',monospace;
+    font-size:14px;
+    color:#8b3a1c;
+  }
+  .card-link{pointer-events:none}
+}
+</style>
+</head>
+<body>
+<div class="mobile-nav">
+  <p class="mobile-nav-title">L'archivio ritrovato</p>
+  <p class="mobile-nav-sub">Pop-up Museum · ADI Design Museum · Milano 2026</p>
+  <a href="popup-museum.html" class="mobile-btn">
+    <div class="mobile-btn-left">
+      <span class="mobile-btn-tema">il progetto</span>
+      <span class="mobile-btn-titolo">pop-up museum</span>
+    </div>
+    <span class="mobile-btn-arrow">→</span>
+  </a>
+  <a href="spartaco.html" class="mobile-btn">
+    <div class="mobile-btn-left">
+      <span class="mobile-btn-tema">il custode</span>
+      <span class="mobile-btn-titolo">Spartaco Albertarelli</span>
+    </div>
+    <span class="mobile-btn-arrow">→</span>
+  </a>
+  <a href="date.html" class="mobile-btn">
+    <div class="mobile-btn-left">
+      <span class="mobile-btn-tema">date e programma</span>
+      <span class="mobile-btn-titolo">cinque lunedì sera</span>
+    </div>
+    <span class="mobile-btn-arrow">→</span>
+  </a>
+  <a href="prenota.html" class="mobile-btn">
+    <div class="mobile-btn-left">
+      <span class="mobile-btn-tema">eventbrite</span>
+      <span class="mobile-btn-titolo">prenota il tuo posto</span>
+    </div>
+    <span class="mobile-btn-arrow">→</span>
+  </a>
+  <a href="https://instagram.com/TUOPROFILO" target="_blank" class="mobile-btn">
+    <div class="mobile-btn-left">
+      <span class="mobile-btn-tema">instagram</span>
+      <span class="mobile-btn-titolo">seguici</span>
+    </div>
+    <span class="mobile-btn-arrow">→</span>
+  </a>
+</div>
+
+<div class="shelf-wrap">
+<svg width="100%" viewBox="0 0 680 1400" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>L'archivio ritrovato — scaffali</title>
+<rect width="680" height="1400" fill="none"/>
+
+<rect x="12" y="87" width="27" height="63" fill="#3498db"/>
+<rect x="12" y="87" width="27" height="9" fill="#167abd"/>
+<rect x="40" y="76" width="24" height="74" fill="#c0392b"/>
+<rect x="64" y="73" width="24" height="77" fill="#2c6296"/>
+<rect x="94" y="104" width="20" height="36" rx="2" fill="#fdfaf4" stroke="#c8b890" stroke-width="0.6" transform="rotate(-10,104,150)"/>
+<rect x="94" y="104" width="20" height="36" rx="2" fill="#fdfaf4" stroke="#c8b890" stroke-width="0.6" transform="rotate(0,104,150)"/>
+<rect x="94" y="104" width="20" height="36" rx="2" fill="#fdfaf4" stroke="#c8b890" stroke-width="0.6" transform="rotate(10,104,150)"/>
+<text x="104" y="132" font-family="Courier New" font-size="12" fill="#c0392b" text-anchor="middle" transform="rotate(10,104,150)">♦</text>
+<rect x="124" y="129" width="46" height="21" fill="#c0742a"/>
+<rect x="124" y="112" width="46" height="19" fill="#c0392b"/>
+<rect x="172" y="92" width="26" height="58" fill="#3498db"/>
+<rect x="172" y="92" width="26" height="9" fill="#167abd"/>
+<rect x="200" y="86" width="26" height="64" fill="#13937a"/>
+<rect x="226" y="87" width="29" height="63" fill="#2c3e50"/>
+<rect x="258" y="106" width="32" height="38" fill="#faf6ed" stroke="#c8b890" stroke-width="0.8" transform="rotate(-2,274,150)"/>
+<line x1="262" y1="118" x2="286" y2="118" stroke="#c8b890" stroke-width="0.7" transform="rotate(-2,274,150)"/>
+<line x1="262" y1="126" x2="286" y2="126" stroke="#c8b890" stroke-width="0.7" transform="rotate(-2,274,150)"/>
+<circle cx="274" cy="104" r="3" fill="#c0392b"/>
+<rect x="296" y="77" width="20" height="73" fill="#e8b84b"/>
+<rect x="319" y="106" width="32" height="38" fill="#faf6ed" stroke="#c8b890" stroke-width="0.8" transform="rotate(2,335,150)"/>
+<line x1="323" y1="118" x2="347" y2="118" stroke="#c8b890" stroke-width="0.7" transform="rotate(2,335,150)"/>
+<line x1="323" y1="126" x2="347" y2="126" stroke="#c8b890" stroke-width="0.7" transform="rotate(2,335,150)"/>
+<circle cx="335" cy="104" r="3" fill="#c0392b"/>
+<rect x="356" y="80" width="18" height="70" fill="#8e44ad"/>
+<rect x="356" y="80" width="18" height="9" fill="#70268f"/>
+<rect x="377" y="100" width="34" height="50" fill="#d4c4a8" stroke="#c8b890" stroke-width="0.8" transform="rotate(-1,394,150)"/>
+<circle cx="394" cy="148" r="3" fill="#c0392b"/>
+<rect x="415" y="134" width="40" height="16" fill="#1abc9c"/>
+<rect x="415" y="108" width="40" height="21" fill="#8e44ad"/>
+<rect x="415" y="84" width="40" height="22" fill="#2c6296"/>
+<rect x="456" y="106" width="32" height="38" fill="#faf6ed" stroke="#c8b890" stroke-width="0.8" transform="rotate(-3,472,150)"/>
+<line x1="460" y1="118" x2="484" y2="118" stroke="#c8b890" stroke-width="0.7" transform="rotate(-3,472,150)"/>
+<line x1="460" y1="126" x2="484" y2="126" stroke="#c8b890" stroke-width="0.7" transform="rotate(-3,472,150)"/>
+<circle cx="472" cy="104" r="3" fill="#c0392b"/>
+<rect x="493" y="87" width="20" height="63" fill="#5a9a5a"/>
+<rect x="493" y="87" width="20" height="9" fill="#3c7c3c"/>
+<rect x="514" y="85" width="25" height="65" fill="#13937a"/>
+<rect x="539" y="76" width="19" height="74" fill="#2c3e50"/>
+<rect x="539" y="76" width="19" height="9" fill="#0e2032"/>
+<rect x="558" y="82" width="24" height="68" fill="#e67e22"/>
+<rect x="585" y="75" width="23" height="75" fill="#3498db"/>
+<rect x="585" y="75" width="23" height="9" fill="#167abd"/>
+<rect x="608" y="133" width="17" height="17" rx="3" fill="#2c3e50" stroke="#1a1a1a" stroke-width="0.8"/>
+<circle cx="611" cy="136" r="1.5" fill="#fdfaf4"/>
+<circle cx="622" cy="147" r="1.5" fill="#fdfaf4"/>
+<rect x="629" y="133" width="45" height="17" fill="#e67e22"/>
+<rect x="629" y="112" width="45" height="19" fill="#9b59b6"/>
+<rect x="0" y="150" width="680" height="11" fill="#c8a87a"/>
+<rect x="0" y="150" width="680" height="3" fill="#e2c48e"/>
+<g class="card-link" onclick="window.location.href='popup-museum.html'">
+<rect x="30" y="150" width="130" height="50" fill="#faf6ed" stroke="#c8b890" stroke-width="0.8" rx="2" transform="rotate(-2,95,150)"/>
+<circle cx="95" cy="150" r="4" fill="#c0392b"/>
+<text x="95" y="174" font-family="Courier New" font-size="13" fill="#b83030" text-anchor="middle" transform="rotate(-2,95,150)">pop-up museum</text>
+<text x="95" y="189" font-family="Courier New" font-size="8" fill="#8a7a6a" text-anchor="middle" transform="rotate(-2,95,150)">→ il progetto</text>
+</g>
+<rect x="12" y="248" width="9" height="22" rx="2" fill="#2980b9"/>
+<circle cx="16" cy="245" r="5" fill="#2980b9"/>
+<rect x="27" y="210" width="22" height="60" fill="#2980b9"/>
+<rect x="51" y="251" width="44" height="19" fill="#16a085"/>
+<rect x="51" y="236" width="44" height="17" fill="#2c6296"/>
+<rect x="51" y="213" width="44" height="19" fill="#16a085"/>
+<rect x="98" y="201" width="21" height="69" fill="#27ae60"/>
+<rect x="98" y="201" width="21" height="9" fill="#099042"/>
+<circle cx="130" cy="261" r="9" fill="#16a085"/>
+<circle cx="130" cy="261" r="5" fill="#008267"/>
+<rect x="142" y="249" width="43" height="21" fill="#2c3e50"/>
+<rect x="142" y="238" width="43" height="16" fill="#3498db"/>
+<rect x="142" y="210" width="43" height="20" fill="#5a9a5a"/>
+<rect x="186" y="252" width="41" height="18" fill="#27ae60"/>
+<rect x="186" y="232" width="41" height="19" fill="#d4845a"/>
+<rect x="186" y="210" width="41" height="20" fill="#13937a"/>
+<rect x="229" y="256" width="14" height="14" rx="3" fill="#27ae60" stroke="#1a1a1a" stroke-width="0.8"/>
+<circle cx="236" cy="263" r="1.5" fill="#fdfaf4"/>
+<rect x="245" y="195" width="23" height="75" fill="#e8b84b"/>
+<rect x="270" y="248" width="9" height="22" rx="2" fill="#27ae60"/>
+<circle cx="274" cy="245" r="5" fill="#27ae60"/>
+<rect x="288" y="248" width="9" height="22" rx="2" fill="#3498db"/>
+<circle cx="292" cy="245" r="5" fill="#3498db"/>
+<rect x="305" y="198" width="20" height="72" fill="#2980b9"/>
+<rect x="328" y="253" width="41" height="17" fill="#f39c12"/>
+<rect x="328" y="232" width="41" height="19" fill="#f39c12"/>
+<rect x="328" y="204" width="41" height="22" fill="#962d22"/>
+<polygon points="394.4,250.0 394.4,262.0 384.0,268.0 373.6,262.0 373.6,250.0 384.0,244.0" fill="#e74c3c"/>
+<polygon points="394.4,233.2 394.4,245.2 384.0,251.2 373.6,245.2 373.6,233.2 384.0,227.2" fill="#1abc9c"/>
+<circle cx="412" cy="258" r="12" fill="#e74c3c"/>
+<circle cx="412" cy="258" r="8" fill="#c92e1e"/>
+<rect x="427" y="254" width="39" height="16" fill="#1abc9c"/>
+<rect x="427" y="228" width="39" height="21" fill="#e67e22"/>
+<rect x="427" y="210" width="39" height="20" fill="#3b82c4"/>
+<rect x="468" y="253" width="49" height="17" fill="#e74c3c"/>
+<rect x="468" y="238" width="49" height="16" fill="#962d22"/>
+<rect x="468" y="222" width="49" height="16" fill="#3498db"/>
+<rect x="517" y="203" width="26" height="67" fill="#e67e22"/>
+<rect x="517" y="203" width="26" height="9" fill="#c86004"/>
+<rect x="546" y="253" width="17" height="17" rx="3" fill="#fdfaf4" stroke="#1a1a1a" stroke-width="0.8"/>
+<circle cx="549" cy="256" r="1.5" fill="#1a1a1a"/>
+<circle cx="560" cy="267" r="1.5" fill="#1a1a1a"/>
+<rect x="565" y="201" width="22" height="69" fill="#1abc9c"/>
+<rect x="565" y="201" width="22" height="9" fill="#009e7e"/>
+<rect x="588" y="192" width="23" height="78" fill="#13937a"/>
+<rect x="611" y="255" width="15" height="15" rx="3" fill="#fdfaf4" stroke="#1a1a1a" stroke-width="0.8"/>
+<circle cx="614" cy="258" r="1.5" fill="#1a1a1a"/>
+<circle cx="623" cy="258" r="1.5" fill="#1a1a1a"/>
+<circle cx="618" cy="262" r="1.5" fill="#1a1a1a"/>
+<circle cx="614" cy="267" r="1.5" fill="#1a1a1a"/>
+<circle cx="623" cy="267" r="1.5" fill="#1a1a1a"/>
+<rect x="628" y="248" width="9" height="22" rx="2" fill="#e8b84b"/>
+<circle cx="632" cy="245" r="5" fill="#e8b84b"/>
+<rect x="0" y="270" width="680" height="11" fill="#c8a87a"/>
+<rect x="0" y="270" width="680" height="3" fill="#e2c48e"/>
+<g class="card-link" onclick="window.location.href='spartaco.html'">
+<rect x="460" y="270" width="180" height="50" fill="#faf6ed" stroke="#c8b890" stroke-width="0.8" rx="2" transform="rotate(2,550,270)"/>
+<circle cx="550" cy="270" r="4" fill="#c0392b"/>
+<text x="550" y="294" font-family="Courier New" font-size="13" fill="#b83030" text-anchor="middle" transform="rotate(2,550,270)">Spartaco Albertarelli</text>
+<text x="550" y="309" font-family="Courier New" font-size="8" fill="#8a7a6a" text-anchor="middle" transform="rotate(2,550,270)">→ il custode</text>
+</g>
+<rect x="12" y="372" width="41" height="18" fill="#e8b84b"/>
+<rect x="12" y="356" width="41" height="17" fill="#d4845a"/>
+<rect x="12" y="339" width="41" height="17" fill="#16a085"/>
+<rect x="53" y="332" width="26" height="58" fill="#8e44ad"/>
+<rect x="53" y="332" width="26" height="9" fill="#70268f"/>
+<rect x="79" y="368" width="38" height="22" fill="#e74c3c"/>
+<rect x="79" y="354" width="38" height="18" fill="#2980b9"/>
+<rect x="119" y="373" width="48" height="17" fill="#16a085"/>
+<rect x="119" y="358" width="48" height="16" fill="#8e44ad"/>
+<rect x="169" y="317" width="19" height="73" fill="#13937a"/>
+<rect x="169" y="317" width="19" height="9" fill="#00755c"/>
+<rect x="188" y="322" width="27" height="68" fill="#e8b84b"/>
+<rect x="217" y="313" width="22" height="77" fill="#e8b84b"/>
+<rect x="217" y="313" width="22" height="9" fill="#ca9a2d"/>
+<rect x="240" y="368" width="9" height="22" rx="2" fill="#3b82c4"/>
+<circle cx="244" cy="365" r="5" fill="#3b82c4"/>
+<rect x="257" y="325" width="29" height="65" fill="#3498db"/>
+<rect x="257" y="325" width="29" height="9" fill="#167abd"/>
+<rect x="289" y="324" width="28" height="66" fill="#e8b84b"/>
+<rect x="289" y="324" width="28" height="9" fill="#ca9a2d"/>
+<rect x="317" y="326" width="18" height="64" fill="#d4845a"/>
+<rect x="317" y="326" width="18" height="9" fill="#b6663c"/>
+<rect x="336" y="327" width="22" height="63" fill="#16a085"/>
+<rect x="361" y="331" width="28" height="59" fill="#8e44ad"/>
+<rect x="392" y="322" width="21" height="68" fill="#c0392b"/>
+<rect x="392" y="322" width="21" height="9" fill="#a21b0d"/>
+<rect x="416" y="327" width="26" height="63" fill="#2c6296"/>
+<rect x="416" y="327" width="26" height="9" fill="#0e4478"/>
+<rect x="445" y="376" width="14" height="14" rx="3" fill="#27ae60" stroke="#1a1a1a" stroke-width="0.8"/>
+<circle cx="448" cy="379" r="1.5" fill="#fdfaf4"/>
+<circle cx="456" cy="379" r="1.5" fill="#fdfaf4"/>
+<circle cx="452" cy="383" r="1.5" fill="#fdfaf4"/>
+<circle cx="448" cy="387" r="1.5" fill="#fdfaf4"/>
+<circle cx="456" cy="387" r="1.5" fill="#fdfaf4"/>
+<rect x="462" y="325" width="29" height="65" fill="#e74c3c"/>
+<rect x="462" y="325" width="29" height="9" fill="#c92e1e"/>
+<rect x="493" y="373" width="52" height="17" fill="#9b59b6"/>
+<rect x="493" y="356" width="52" height="17" fill="#c0742a"/>
+<rect x="548" y="372" width="38" height="18" fill="#f39c12"/>
+<rect x="548" y="354" width="38" height="18" fill="#962d22"/>
+<rect x="589" y="332" width="28" height="58" fill="#27ae60"/>
+<rect x="620" y="323" width="18" height="67" fill="#e8b84b"/>
+<rect x="620" y="323" width="18" height="9" fill="#ca9a2d"/>
+<rect x="640" y="374" width="45" height="16" fill="#2c3e50"/>
+<rect x="640" y="354" width="45" height="18" fill="#e74c3c"/>
+<rect x="0" y="390" width="680" height="11" fill="#c8a87a"/>
+<rect x="0" y="390" width="680" height="3" fill="#e2c48e"/>
+<g class="card-link" onclick="window.location.href='date.html'">
+<rect x="30" y="390" width="162" height="50" fill="#faf6ed" stroke="#c8b890" stroke-width="0.8" rx="2" transform="rotate(-2,111,390)"/>
+<circle cx="111" cy="390" r="4" fill="#c0392b"/>
+<text x="111" y="414" font-family="Courier New" font-size="13" fill="#b83030" text-anchor="middle" transform="rotate(-2,111,390)">cinque lunedì sera</text>
+<text x="111" y="429" font-family="Courier New" font-size="8" fill="#8a7a6a" text-anchor="middle" transform="rotate(-2,111,390)">→ date e programma</text>
+</g>
+<rect x="12" y="492" width="18" height="18" rx="3" fill="#8e44ad" stroke="#1a1a1a" stroke-width="0.8"/>
+<circle cx="15" cy="495" r="1.5" fill="#fdfaf4"/>
+<circle cx="27" cy="507" r="1.5" fill="#fdfaf4"/>
+<rect x="35" y="466" width="32" height="38" fill="#faf6ed" stroke="#c8b890" stroke-width="0.8" transform="rotate(-3,51,510)"/>
+<line x1="39" y1="478" x2="63" y2="478" stroke="#c8b890" stroke-width="0.7" transform="rotate(-3,51,510)"/>
+<line x1="39" y1="486" x2="63" y2="486" stroke="#c8b890" stroke-width="0.7" transform="rotate(-3,51,510)"/>
+<circle cx="51" cy="464" r="3" fill="#c0392b"/>
+<rect x="74" y="440" width="19" height="70" fill="#9b59b6"/>
+<rect x="74" y="440" width="19" height="9" fill="#7d3b98"/>
+<rect x="95" y="450" width="20" height="60" fill="#3498db"/>
+<rect x="95" y="450" width="20" height="9" fill="#167abd"/>
+<rect x="116" y="444" width="27" height="66" fill="#27ae60"/>
+<rect x="143" y="439" width="28" height="71" fill="#3b82c4"/>
+<rect x="143" y="439" width="28" height="9" fill="#1d64a6"/>
+<rect x="173" y="435" width="24" height="75" fill="#1abc9c"/>
+<rect x="199" y="496" width="14" height="14" rx="3" fill="#e67e22" stroke="#1a1a1a" stroke-width="0.8"/>
+<circle cx="202" cy="499" r="1.5" fill="#fdfaf4"/>
+<circle cx="210" cy="499" r="1.5" fill="#fdfaf4"/>
+<circle cx="206" cy="503" r="1.5" fill="#fdfaf4"/>
+<circle cx="202" cy="507" r="1.5" fill="#fdfaf4"/>
+<circle cx="210" cy="507" r="1.5" fill="#fdfaf4"/>
+<rect x="216" y="466" width="32" height="38" fill="#faf6ed" stroke="#c8b890" stroke-width="0.8" transform="rotate(-2,232,510)"/>
+<line x1="220" y1="478" x2="244" y2="478" stroke="#c8b890" stroke-width="0.7" transform="rotate(-2,232,510)"/>
+<line x1="220" y1="486" x2="244" y2="486" stroke="#c8b890" stroke-width="0.7" transform="rotate(-2,232,510)"/>
+<circle cx="232" cy="464" r="3" fill="#c0392b"/>
+<rect x="255" y="490" width="44" height="20" fill="#2c6296"/>
+<rect x="255" y="476" width="44" height="17" fill="#9b59b6"/>
+<rect x="255" y="447" width="44" height="21" fill="#2980b9"/>
+<rect x="302" y="444" width="29" height="66" fill="#c0742a"/>
+<rect x="302" y="444" width="29" height="9" fill="#a2560c"/>
+<rect x="334" y="494" width="16" height="16" rx="3" fill="#5a9a5a" stroke="#1a1a1a" stroke-width="0.8"/>
+<circle cx="337" cy="497" r="1.5" fill="#fdfaf4"/>
+<circle cx="347" cy="497" r="1.5" fill="#fdfaf4"/>
+<circle cx="337" cy="502" r="1.5" fill="#fdfaf4"/>
+<circle cx="347" cy="502" r="1.5" fill="#fdfaf4"/>
+<circle cx="337" cy="507" r="1.5" fill="#fdfaf4"/>
+<circle cx="347" cy="507" r="1.5" fill="#fdfaf4"/>
+<rect x="355" y="488" width="9" height="22" rx="2" fill="#d4845a"/>
+<circle cx="359" cy="485" r="5" fill="#d4845a"/>
+<circle cx="384" cy="498" r="12" fill="#c0742a"/>
+<circle cx="384" cy="498" r="8" fill="#a2560c"/>
+<rect x="398" y="450" width="21" height="60" fill="#16a085"/>
+<rect x="421" y="494" width="16" height="16" rx="3" fill="#fdfaf4" stroke="#1a1a1a" stroke-width="0.8"/>
+<circle cx="424" cy="497" r="1.5" fill="#1a1a1a"/>
+<circle cx="434" cy="497" r="1.5" fill="#1a1a1a"/>
+<circle cx="424" cy="502" r="1.5" fill="#1a1a1a"/>
+<circle cx="434" cy="502" r="1.5" fill="#1a1a1a"/>
+<circle cx="424" cy="507" r="1.5" fill="#1a1a1a"/>
+<circle cx="434" cy="507" r="1.5" fill="#1a1a1a"/>
+<rect x="439" y="491" width="40" height="19" fill="#27ae60"/>
+<rect x="439" y="470" width="40" height="20" fill="#962d22"/>
+<rect x="439" y="462" width="40" height="16" fill="#3b82c4"/>
+<rect x="479" y="432" width="28" height="78" fill="#e67e22"/>
+<polygon points="529.4,490.0 529.4,502.0 519.0,508.0 508.6,502.0 508.6,490.0 519.0,484.0" fill="#d4845a"/>
+<polygon points="529.4,473.2 529.4,485.2 519.0,491.2 508.6,485.2 508.6,473.2 519.0,467.2" fill="#16a085"/>
+<polygon points="555.4,490.0 555.4,502.0 545.0,508.0 534.6,502.0 534.6,490.0 545.0,484.0" fill="#8e44ad"/>
+<polygon points="555.4,473.2 555.4,485.2 545.0,491.2 534.6,485.2 534.6,473.2 545.0,467.2" fill="#16a085"/>
+<rect x="559" y="439" width="20" height="71" fill="#d4845a"/>
+<rect x="559" y="439" width="20" height="9" fill="#b6663c"/>
+<rect x="579" y="443" width="26" height="67" fill="#c0392b"/>
+<rect x="579" y="443" width="26" height="9" fill="#a21b0d"/>
+<rect x="606" y="496" width="14" height="14" rx="3" fill="#fdfaf4" stroke="#1a1a1a" stroke-width="0.8"/>
+<circle cx="609" cy="499" r="1.5" fill="#1a1a1a"/>
+<circle cx="613" cy="503" r="1.5" fill="#1a1a1a"/>
+<circle cx="617" cy="507" r="1.5" fill="#1a1a1a"/>
+<rect x="625" y="433" width="22" height="77" fill="#3498db"/>
+<rect x="625" y="433" width="22" height="9" fill="#167abd"/>
+<rect x="0" y="510" width="680" height="11" fill="#c8a87a"/>
+<rect x="0" y="510" width="680" height="3" fill="#e2c48e"/>
+<g class="card-link" onclick="window.location.href='prenota.html'">
+<rect x="460" y="510" width="162" height="50" fill="#faf6ed" stroke="#c8b890" stroke-width="0.8" rx="2" transform="rotate(2,541,510)"/>
+<circle cx="541" cy="510" r="4" fill="#c0392b"/>
+<text x="541" y="534" font-family="Courier New" font-size="13" fill="#b83030" text-anchor="middle" transform="rotate(2,541,510)">prenota il tuo posto</text>
+<text x="541" y="549" font-family="Courier New" font-size="8" fill="#8a7a6a" text-anchor="middle" transform="rotate(2,541,510)">→ eventbrite</text>
+</g>
+<rect x="12" y="613" width="50" height="17" fill="#8e44ad"/>
+<rect x="12" y="590" width="50" height="20" fill="#e67e22"/>
+<rect x="12" y="564" width="50" height="22" fill="#8e44ad"/>
+<rect x="63" y="570" width="26" height="60" fill="#2c6296"/>
+<rect x="63" y="570" width="26" height="9" fill="#0e4478"/>
+<rect x="92" y="608" width="46" height="22" fill="#962d22"/>
+<rect x="92" y="598" width="46" height="16" fill="#c0392b"/>
+<rect x="92" y="582" width="46" height="16" fill="#d4845a"/>
+<rect x="141" y="566" width="18" height="64" fill="#2980b9"/>
+<rect x="159" y="568" width="19" height="62" fill="#9b59b6"/>
+<polygon points="202.4,610.0 202.4,622.0 192.0,628.0 181.6,622.0 181.6,610.0 192.0,604.0" fill="#e74c3c"/>
+<polygon points="202.4,593.2 202.4,605.2 192.0,611.2 181.6,605.2 181.6,593.2 192.0,587.2" fill="#27ae60"/>
+<rect x="205" y="566" width="18" height="64" fill="#2c6296"/>
+<rect x="205" y="566" width="18" height="9" fill="#0e4478"/>
+<rect x="225" y="564" width="28" height="66" fill="#c0742a"/>
+<rect x="225" y="564" width="28" height="9" fill="#a2560c"/>
+<rect x="255" y="562" width="18" height="68" fill="#27ae60"/>
+<polygon points="296.4,610.0 296.4,622.0 286.0,628.0 275.6,622.0 275.6,610.0 286.0,604.0" fill="#27ae60"/>
+<polygon points="296.4,593.2 296.4,605.2 286.0,611.2 275.6,605.2 275.6,593.2 286.0,587.2" fill="#c0742a"/>
+<circle cx="314" cy="618" r="12" fill="#1abc9c"/>
+<circle cx="314" cy="618" r="8" fill="#009e7e"/>
+<rect x="330" y="555" width="26" height="75" fill="#13937a"/>
+<rect x="330" y="555" width="26" height="9" fill="#00755c"/>
+<rect x="356" y="614" width="40" height="16" fill="#d4845a"/>
+<rect x="356" y="590" width="40" height="20" fill="#c0392b"/>
+<rect x="398" y="567" width="23" height="63" fill="#13937a"/>
+<rect x="421" y="562" width="28" height="68" fill="#13937a"/>
+<rect x="421" y="562" width="28" height="9" fill="#00755c"/>
+<rect x="450" y="557" width="19" height="73" fill="#e8b84b"/>
+<rect x="450" y="557" width="19" height="9" fill="#ca9a2d"/>
+<rect x="472" y="613" width="48" height="17" fill="#5a9a5a"/>
+<rect x="472" y="596" width="48" height="17" fill="#2c3e50"/>
+<rect x="472" y="576" width="48" height="18" fill="#c0392b"/>
+<rect x="520" y="554" width="23" height="76" fill="#3b82c4"/>
+<rect x="520" y="554" width="23" height="9" fill="#1d64a6"/>
+<rect x="543" y="613" width="45" height="17" fill="#d4845a"/>
+<rect x="543" y="588" width="45" height="21" fill="#8e44ad"/>
+<rect x="543" y="576" width="45" height="18" fill="#8e44ad"/>
+<rect x="588" y="568" width="22" height="62" fill="#13937a"/>
+<rect x="588" y="568" width="22" height="9" fill="#00755c"/>
+<rect x="611" y="560" width="29" height="70" fill="#f39c12"/>
+<rect x="611" y="560" width="29" height="9" fill="#d57e00"/>
+<rect x="0" y="630" width="680" height="11" fill="#c8a87a"/>
+<rect x="0" y="630" width="680" height="3" fill="#e2c48e"/>
+<g class="card-link" onclick="window.open('https://instagram.com/TUOPROFILO','_blank')">
+<rect x="30" y="630" width="110" height="50" fill="#faf6ed" stroke="#c8b890" stroke-width="0.8" rx="2" transform="rotate(-2,85,630)"/>
+<circle cx="85" cy="630" r="4" fill="#c0392b"/>
+<text x="85" y="654" font-family="Courier New" font-size="13" fill="#b83030" text-anchor="middle" transform="rotate(-2,85,630)">seguici</text>
+<text x="85" y="669" font-family="Courier New" font-size="8" fill="#8a7a6a" text-anchor="middle" transform="rotate(-2,85,630)">→ instagram</text>
+</g>
+<rect x="12" y="677" width="19" height="73" fill="#9b59b6"/>
+<circle cx="41" cy="741" r="9" fill="#c0742a"/>
+<circle cx="41" cy="741" r="5" fill="#a2560c"/>
+<rect x="55" y="706" width="32" height="38" fill="#faf6ed" stroke="#c8b890" stroke-width="0.8" transform="rotate(1,71,750)"/>
+<line x1="59" y1="718" x2="83" y2="718" stroke="#c8b890" stroke-width="0.7" transform="rotate(1,71,750)"/>
+<line x1="59" y1="726" x2="83" y2="726" stroke="#c8b890" stroke-width="0.7" transform="rotate(1,71,750)"/>
+<circle cx="71" cy="704" r="3" fill="#c0392b"/>
+<rect x="93" y="728" width="9" height="22" rx="2" fill="#2c3e50"/>
+<circle cx="97" cy="725" r="5" fill="#2c3e50"/>
+<rect x="108" y="692" width="21" height="58" fill="#c0392b"/>
+<rect x="108" y="692" width="21" height="9" fill="#a21b0d"/>
+<rect x="132" y="730" width="36" height="20" fill="#e8b84b"/>
+<rect x="132" y="716" width="36" height="17" fill="#9b59b6"/>
+<rect x="175" y="704" width="20" height="36" rx="2" fill="#fdfaf4" stroke="#c8b890" stroke-width="0.6" transform="rotate(-10,185,750)"/>
+<rect x="175" y="704" width="20" height="36" rx="2" fill="#fdfaf4" stroke="#c8b890" stroke-width="0.6" transform="rotate(0,185,750)"/>
+<rect x="175" y="704" width="20" height="36" rx="2" fill="#fdfaf4" stroke="#c8b890" stroke-width="0.6" transform="rotate(10,185,750)"/>
+<text x="185" y="732" font-family="Courier New" font-size="12" fill="#2c3e50" text-anchor="middle" transform="rotate(10,185,750)">♠</text>
+<rect x="206" y="691" width="29" height="59" fill="#2c6296"/>
+<rect x="206" y="691" width="29" height="9" fill="#0e4478"/>
+<rect x="235" y="732" width="47" height="18" fill="#8e44ad"/>
+<rect x="235" y="714" width="47" height="18" fill="#962d22"/>
+<rect x="235" y="687" width="47" height="21" fill="#8e44ad"/>
+<rect x="282" y="729" width="47" height="21" fill="#d4845a"/>
+<rect x="282" y="716" width="47" height="17" fill="#f39c12"/>
+<polygon points="353.4,730.0 353.4,742.0 343.0,748.0 332.6,742.0 332.6,730.0 343.0,724.0" fill="#1abc9c"/>
+<polygon points="353.4,713.2 353.4,725.2 343.0,731.2 332.6,725.2 332.6,713.2 343.0,707.2" fill="#3498db"/>
+<circle cx="369" cy="740" r="10" fill="#f39c12"/>
+<circle cx="369" cy="740" r="6" fill="#d57e00"/>
+<rect x="384" y="733" width="36" height="17" fill="#9b59b6"/>
+<rect x="384" y="716" width="36" height="17" fill="#3b82c4"/>
+<rect x="384" y="684" width="36" height="22" fill="#c0742a"/>
+<rect x="421" y="681" width="24" height="69" fill="#16a085"/>
+<rect x="421" y="681" width="24" height="9" fill="#008267"/>
+<rect x="447" y="728" width="9" height="22" rx="2" fill="#2c3e50"/>
+<circle cx="451" cy="725" r="5" fill="#2c3e50"/>
+<rect x="462" y="729" width="50" height="21" fill="#1abc9c"/>
+<rect x="462" y="708" width="50" height="21" fill="#e67e22"/>
+<rect x="462" y="696" width="50" height="18" fill="#e74c3c"/>
+<rect x="513" y="675" width="24" height="75" fill="#2c6296"/>
+<rect x="538" y="680" width="19" height="70" fill="#2980b9"/>
+<rect x="560" y="690" width="21" height="60" fill="#13937a"/>
+<rect x="560" y="690" width="21" height="9" fill="#00755c"/>
+<rect x="582" y="679" width="21" height="71" fill="#3498db"/>
+<rect x="604" y="691" width="18" height="59" fill="#e67e22"/>
+<rect x="604" y="691" width="18" height="9" fill="#c86004"/>
+<rect x="625" y="678" width="22" height="72" fill="#3498db"/>
+<rect x="625" y="678" width="22" height="9" fill="#167abd"/>
+<rect x="0" y="750" width="680" height="11" fill="#c8a87a"/>
+<rect x="0" y="750" width="680" height="3" fill="#e2c48e"/>
+<rect x="12" y="849" width="49" height="21" fill="#f39c12"/>
+<rect x="12" y="830" width="49" height="20" fill="#e74c3c"/>
+<rect x="12" y="813" width="49" height="19" fill="#8e44ad"/>
+<circle cx="74" cy="859" r="11" fill="#8e44ad"/>
+<circle cx="74" cy="859" r="7" fill="#70268f"/>
+<rect x="90" y="797" width="26" height="73" fill="#e74c3c"/>
+<rect x="118" y="809" width="25" height="61" fill="#13937a"/>
+<rect x="118" y="809" width="25" height="9" fill="#00755c"/>
+<rect x="146" y="812" width="25" height="58" fill="#27ae60"/>
+<rect x="146" y="812" width="25" height="9" fill="#099042"/>
+<rect x="173" y="855" width="15" height="15" rx="3" fill="#fdfaf4" stroke="#1a1a1a" stroke-width="0.8"/>
+<circle cx="176" cy="858" r="1.5" fill="#1a1a1a"/>
+<circle cx="185" cy="858" r="1.5" fill="#1a1a1a"/>
+<circle cx="180" cy="862" r="1.5" fill="#1a1a1a"/>
+<circle cx="176" cy="867" r="1.5" fill="#1a1a1a"/>
+<circle cx="185" cy="867" r="1.5" fill="#1a1a1a"/>
+<rect x="193" y="826" width="32" height="38" fill="#faf6ed" stroke="#c8b890" stroke-width="0.8" transform="rotate(3,209,870)"/>
+<line x1="197" y1="838" x2="221" y2="838" stroke="#c8b890" stroke-width="0.7" transform="rotate(3,209,870)"/>
+<line x1="197" y1="846" x2="221" y2="846" stroke="#c8b890" stroke-width="0.7" transform="rotate(3,209,870)"/>
+<circle cx="209" cy="824" r="3" fill="#c0392b"/>
+<rect x="230" y="806" width="29" height="64" fill="#5a9a5a"/>
+<rect x="230" y="806" width="29" height="9" fill="#3c7c3c"/>
+<rect x="260" y="811" width="29" height="59" fill="#f39c12"/>
+<rect x="290" y="806" width="27" height="64" fill="#e8b84b"/>
+<rect x="290" y="806" width="27" height="9" fill="#ca9a2d"/>
+<rect x="317" y="801" width="25" height="69" fill="#e74c3c"/>
+<rect x="344" y="792" width="18" height="78" fill="#e67e22"/>
+<rect x="344" y="792" width="18" height="9" fill="#c86004"/>
+<circle cx="372" cy="861" r="9" fill="#962d22"/>
+<circle cx="372" cy="861" r="5" fill="#780f04"/>
+<rect x="386" y="848" width="9" height="22" rx="2" fill="#16a085"/>
+<circle cx="390" cy="845" r="5" fill="#16a085"/>
+<rect x="403" y="797" width="28" height="73" fill="#e67e22"/>
+<rect x="403" y="797" width="28" height="9" fill="#c86004"/>
+<rect x="433" y="852" width="36" height="18" fill="#3b82c4"/>
+<rect x="433" y="830" width="36" height="20" fill="#13937a"/>
+<rect x="433" y="816" width="36" height="18" fill="#c0392b"/>
+<circle cx="479" cy="860" r="10" fill="#3b82c4"/>
+<circle cx="479" cy="860" r="6" fill="#1d64a6"/>
+<rect x="491" y="794" width="23" height="76" fill="#e74c3c"/>
+<rect x="491" y="794" width="23" height="9" fill="#c92e1e"/>
+<rect x="516" y="824" width="38" height="46" fill="#d4c4a8" stroke="#c8b890" stroke-width="0.8" transform="rotate(-2,535,870)"/>
+<circle cx="535" cy="868" r="3" fill="#c0392b"/>
+<polygon points="578.4,850.0 578.4,862.0 568.0,868.0 557.6,862.0 557.6,850.0 568.0,844.0" fill="#16a085"/>
+<polygon points="578.4,833.2 578.4,845.2 568.0,851.2 557.6,845.2 557.6,833.2 568.0,827.2" fill="#13937a"/>
+<rect x="581" y="854" width="38" height="16" fill="#27ae60"/>
+<rect x="581" y="832" width="38" height="19" fill="#2c3e50"/>
+<rect x="625" y="824" width="20" height="36" rx="2" fill="#fdfaf4" stroke="#c8b890" stroke-width="0.6" transform="rotate(-10,635,870)"/>
+<rect x="625" y="824" width="20" height="36" rx="2" fill="#fdfaf4" stroke="#c8b890" stroke-width="0.6" transform="rotate(0,635,870)"/>
+<rect x="625" y="824" width="20" height="36" rx="2" fill="#fdfaf4" stroke="#c8b890" stroke-width="0.6" transform="rotate(10,635,870)"/>
+<text x="635" y="852" font-family="Courier New" font-size="12" fill="#c0392b" text-anchor="middle" transform="rotate(10,635,870)">♥</text>
+<rect x="0" y="870" width="680" height="11" fill="#c8a87a"/>
+<rect x="0" y="870" width="680" height="3" fill="#e2c48e"/>
+<rect x="12" y="932" width="28" height="58" fill="#13937a"/>
+<rect x="42" y="927" width="25" height="63" fill="#27ae60"/>
+<rect x="42" y="927" width="25" height="9" fill="#099042"/>
+<rect x="67" y="921" width="22" height="69" fill="#e8b84b"/>
+<rect x="67" y="921" width="22" height="9" fill="#ca9a2d"/>
+<rect x="89" y="914" width="23" height="76" fill="#8e44ad"/>
+<rect x="89" y="914" width="23" height="9" fill="#70268f"/>
+<rect x="114" y="919" width="22" height="71" fill="#9b59b6"/>
+<rect x="136" y="914" width="28" height="76" fill="#13937a"/>
+<rect x="166" y="913" width="20" height="77" fill="#1abc9c"/>
+<rect x="187" y="946" width="32" height="38" fill="#faf6ed" stroke="#c8b890" stroke-width="0.8" transform="rotate(3,203,990)"/>
+<line x1="191" y1="958" x2="215" y2="958" stroke="#c8b890" stroke-width="0.7" transform="rotate(3,203,990)"/>
+<line x1="191" y1="966" x2="215" y2="966" stroke="#c8b890" stroke-width="0.7" transform="rotate(3,203,990)"/>
+<circle cx="203" cy="944" r="3" fill="#c0392b"/>
+<rect x="227" y="918" width="21" height="72" fill="#f39c12"/>
+<rect x="250" y="922" width="21" height="68" fill="#c0742a"/>
+<rect x="272" y="973" width="37" height="17" fill="#e8b84b"/>
+<rect x="272" y="946" width="37" height="22" fill="#f39c12"/>
+<rect x="312" y="932" width="20" height="58" fill="#3b82c4"/>
+<rect x="312" y="932" width="20" height="9" fill="#1d64a6"/>
+<rect x="332" y="924" width="18" height="66" fill="#c0392b"/>
+<rect x="352" y="913" width="24" height="77" fill="#2c3e50"/>
+<rect x="352" y="913" width="24" height="9" fill="#0e2032"/>
+<rect x="377" y="922" width="25" height="68" fill="#1abc9c"/>
+<rect x="404" y="974" width="16" height="16" rx="3" fill="#fdfaf4" stroke="#1a1a1a" stroke-width="0.8"/>
+<circle cx="407" cy="977" r="1.5" fill="#1a1a1a"/>
+<circle cx="417" cy="977" r="1.5" fill="#1a1a1a"/>
+<circle cx="407" cy="982" r="1.5" fill="#1a1a1a"/>
+<circle cx="417" cy="982" r="1.5" fill="#1a1a1a"/>
+<circle cx="407" cy="987" r="1.5" fill="#1a1a1a"/>
+<circle cx="417" cy="987" r="1.5" fill="#1a1a1a"/>
+<rect x="423" y="922" width="26" height="68" fill="#27ae60"/>
+<rect x="450" y="915" width="22" height="75" fill="#2c6296"/>
+<rect x="450" y="915" width="22" height="9" fill="#0e4478"/>
+<rect x="473" y="929" width="25" height="61" fill="#5a9a5a"/>
+<rect x="499" y="919" width="28" height="71" fill="#27ae60"/>
+<rect x="529" y="968" width="9" height="22" rx="2" fill="#c0392b"/>
+<circle cx="533" cy="965" r="5" fill="#c0392b"/>
+<rect x="545" y="968" width="9" height="22" rx="2" fill="#c0742a"/>
+<circle cx="549" cy="965" r="5" fill="#c0742a"/>
+<rect x="560" y="918" width="27" height="72" fill="#2c6296"/>
+<rect x="589" y="918" width="26" height="72" fill="#c0742a"/>
+<rect x="618" y="968" width="9" height="22" rx="2" fill="#9b59b6"/>
+<circle cx="622" cy="965" r="5" fill="#9b59b6"/>
+<rect x="633" y="930" width="28" height="60" fill="#8e44ad"/>
+<rect x="633" y="930" width="28" height="9" fill="#70268f"/>
+<rect x="0" y="990" width="680" height="11" fill="#c8a87a"/>
+<rect x="0" y="990" width="680" height="3" fill="#e2c48e"/>
+<rect x="12" y="1039" width="27" height="71" fill="#c0742a"/>
+<rect x="41" y="1041" width="20" height="69" fill="#3b82c4"/>
+<rect x="61" y="1093" width="52" height="17" fill="#2c3e50"/>
+<rect x="61" y="1068" width="52" height="21" fill="#8e44ad"/>
+<rect x="61" y="1056" width="52" height="18" fill="#1abc9c"/>
+<rect x="116" y="1045" width="28" height="65" fill="#e74c3c"/>
+<rect x="116" y="1045" width="28" height="9" fill="#c92e1e"/>
+<rect x="146" y="1034" width="26" height="76" fill="#f39c12"/>
+<rect x="146" y="1034" width="26" height="9" fill="#d57e00"/>
+<rect x="175" y="1032" width="22" height="78" fill="#962d22"/>
+<rect x="175" y="1032" width="22" height="9" fill="#780f04"/>
+<rect x="198" y="1066" width="32" height="38" fill="#faf6ed" stroke="#c8b890" stroke-width="0.8" transform="rotate(-1,214,1110)"/>
+<line x1="202" y1="1078" x2="226" y2="1078" stroke="#c8b890" stroke-width="0.7" transform="rotate(-1,214,1110)"/>
+<line x1="202" y1="1086" x2="226" y2="1086" stroke="#c8b890" stroke-width="0.7" transform="rotate(-1,214,1110)"/>
+<circle cx="214" cy="1064" r="3" fill="#c0392b"/>
+<rect x="235" y="1041" width="18" height="69" fill="#c0742a"/>
+<rect x="235" y="1041" width="18" height="9" fill="#a2560c"/>
+<rect x="256" y="1091" width="44" height="19" fill="#8e44ad"/>
+<rect x="256" y="1066" width="44" height="22" fill="#c0742a"/>
+<rect x="301" y="1052" width="20" height="58" fill="#13937a"/>
+<rect x="321" y="1043" width="24" height="67" fill="#1abc9c"/>
+<rect x="352" y="1064" width="20" height="36" rx="2" fill="#fdfaf4" stroke="#c8b890" stroke-width="0.6" transform="rotate(-10,362,1110)"/>
+<rect x="352" y="1064" width="20" height="36" rx="2" fill="#fdfaf4" stroke="#c8b890" stroke-width="0.6" transform="rotate(0,362,1110)"/>
+<rect x="352" y="1064" width="20" height="36" rx="2" fill="#fdfaf4" stroke="#c8b890" stroke-width="0.6" transform="rotate(10,362,1110)"/>
+<text x="362" y="1092" font-family="Courier New" font-size="12" fill="#2c3e50" text-anchor="middle" transform="rotate(10,362,1110)">♠</text>
+<rect x="381" y="1034" width="27" height="76" fill="#2c6296"/>
+<rect x="409" y="1052" width="29" height="58" fill="#2c3e50"/>
+<rect x="438" y="1094" width="16" height="16" rx="3" fill="#fdfaf4" stroke="#1a1a1a" stroke-width="0.8"/>
+<circle cx="441" cy="1097" r="1.5" fill="#1a1a1a"/>
+<circle cx="451" cy="1107" r="1.5" fill="#1a1a1a"/>
+<rect x="459" y="1038" width="24" height="72" fill="#e8b84b"/>
+<rect x="483" y="1050" width="19" height="60" fill="#e74c3c"/>
+<rect x="483" y="1050" width="19" height="9" fill="#c92e1e"/>
+<rect x="505" y="1039" width="27" height="71" fill="#2c6296"/>
+<rect x="532" y="1058" width="39" height="52" fill="#d4c4a8" stroke="#c8b890" stroke-width="0.8" transform="rotate(3,551,1110)"/>
+<circle cx="551" cy="1108" r="3" fill="#c0392b"/>
+<polygon points="595.4,1090.0 595.4,1102.0 585.0,1108.0 574.6,1102.0 574.6,1090.0 585.0,1084.0" fill="#9b59b6"/>
+<polygon points="595.4,1073.2 595.4,1085.2 585.0,1091.2 574.6,1085.2 574.6,1073.2 585.0,1067.2" fill="#c0392b"/>
+<rect x="598" y="1037" width="22" height="73" fill="#3498db"/>
+<rect x="598" y="1037" width="22" height="9" fill="#167abd"/>
+<rect x="622" y="1033" width="27" height="77" fill="#962d22"/>
+<rect x="622" y="1033" width="27" height="9" fill="#780f04"/>
+<rect x="0" y="1110" width="680" height="11" fill="#c8a87a"/>
+<rect x="0" y="1110" width="680" height="3" fill="#e2c48e"/>
+<rect x="12" y="1157" width="25" height="73" fill="#9b59b6"/>
+<rect x="12" y="1157" width="25" height="9" fill="#7d3b98"/>
+<rect x="39" y="1156" width="27" height="74" fill="#3498db"/>
+<rect x="39" y="1156" width="27" height="9" fill="#167abd"/>
+<rect x="69" y="1210" width="36" height="20" fill="#d4845a"/>
+<rect x="69" y="1188" width="36" height="21" fill="#e8b84b"/>
+<rect x="69" y="1182" width="36" height="16" fill="#27ae60"/>
+<rect x="112" y="1184" width="20" height="36" rx="2" fill="#fdfaf4" stroke="#c8b890" stroke-width="0.6" transform="rotate(-10,122,1230)"/>
+<rect x="112" y="1184" width="20" height="36" rx="2" fill="#fdfaf4" stroke="#c8b890" stroke-width="0.6" transform="rotate(0,122,1230)"/>
+<rect x="112" y="1184" width="20" height="36" rx="2" fill="#fdfaf4" stroke="#c8b890" stroke-width="0.6" transform="rotate(10,122,1230)"/>
+<text x="122" y="1212" font-family="Courier New" font-size="12" fill="#2c3e50" text-anchor="middle" transform="rotate(10,122,1230)">♠</text>
+<rect x="144" y="1165" width="19" height="65" fill="#3b82c4"/>
+<rect x="166" y="1162" width="21" height="68" fill="#e74c3c"/>
+<rect x="166" y="1162" width="21" height="9" fill="#c92e1e"/>
+<rect x="189" y="1211" width="51" height="19" fill="#27ae60"/>
+<rect x="189" y="1192" width="51" height="19" fill="#13937a"/>
+<rect x="241" y="1185" width="42" height="45" fill="#d4c4a8" stroke="#c8b890" stroke-width="0.8" transform="rotate(-1,262,1230)"/>
+<circle cx="262" cy="1228" r="3" fill="#c0392b"/>
+<rect x="286" y="1163" width="25" height="67" fill="#2c3e50"/>
+<rect x="286" y="1163" width="25" height="9" fill="#0e2032"/>
+<rect x="314" y="1186" width="32" height="38" fill="#faf6ed" stroke="#c8b890" stroke-width="0.8" transform="rotate(-3,330,1230)"/>
+<line x1="318" y1="1198" x2="342" y2="1198" stroke="#c8b890" stroke-width="0.7" transform="rotate(-3,330,1230)"/>
+<line x1="318" y1="1206" x2="342" y2="1206" stroke="#c8b890" stroke-width="0.7" transform="rotate(-3,330,1230)"/>
+<circle cx="330" cy="1184" r="3" fill="#c0392b"/>
+<rect x="351" y="1162" width="26" height="68" fill="#962d22"/>
+<rect x="379" y="1171" width="30" height="59" fill="#2980b9"/>
+<rect x="379" y="1171" width="30" height="9" fill="#0b629b"/>
+<rect x="410" y="1186" width="32" height="38" fill="#faf6ed" stroke="#c8b890" stroke-width="0.8" transform="rotate(0,426,1230)"/>
+<line x1="414" y1="1198" x2="438" y2="1198" stroke="#c8b890" stroke-width="0.7" transform="rotate(0,426,1230)"/>
+<line x1="414" y1="1206" x2="438" y2="1206" stroke="#c8b890" stroke-width="0.7" transform="rotate(0,426,1230)"/>
+<circle cx="426" cy="1184" r="3" fill="#c0392b"/>
+<rect x="449" y="1154" width="22" height="76" fill="#e8b84b"/>
+<rect x="449" y="1154" width="22" height="9" fill="#ca9a2d"/>
+<rect x="474" y="1157" width="19" height="73" fill="#e8b84b"/>
+<rect x="494" y="1213" width="17" height="17" rx="3" fill="#e74c3c" stroke="#1a1a1a" stroke-width="0.8"/>
+<circle cx="502" cy="1221" r="1.5" fill="#fdfaf4"/>
+<rect x="516" y="1153" width="29" height="77" fill="#c0742a"/>
+<rect x="546" y="1208" width="9" height="22" rx="2" fill="#e8b84b"/>
+<circle cx="550" cy="1205" r="5" fill="#e8b84b"/>
+<rect x="562" y="1164" width="21" height="66" fill="#3498db"/>
+<rect x="584" y="1161" width="22" height="69" fill="#8e44ad"/>
+<rect x="584" y="1161" width="22" height="9" fill="#70268f"/>
+<rect x="607" y="1169" width="22" height="61" fill="#3498db"/>
+<rect x="629" y="1168" width="30" height="62" fill="#2c3e50"/>
+<rect x="629" y="1168" width="30" height="9" fill="#0e2032"/>
+<rect x="0" y="1230" width="680" height="11" fill="#c8a87a"/>
+<rect x="0" y="1230" width="680" height="3" fill="#e2c48e"/>
+
+<!-- RIPIANO per il titolo -->
+<rect x="0" y="1205" width="680" height="11" fill="#c8a87a"/>
+<rect x="0" y="1205" width="680" height="3" fill="#e2c48e"/>
+
+<!-- TITOLO in fondo su cartoncino grande -->
+<g>
+  <rect x="140" y="1205" width="400" height="155" fill="#faf6ed" stroke="#c8b890" stroke-width="1" rx="2" transform="rotate(-1,340,1285)"/>
+  <circle cx="185" cy="1205" r="5" fill="#c0392b"/>
+  <circle cx="495" cy="1205" r="5" fill="#c0392b"/>
+  <text x="340" y="1255" font-family="Playfair Display, serif" font-size="34" font-style="italic" fill="#1a1814" text-anchor="middle" transform="rotate(-1,340,1285)">L'archivio ritrovato</text>
+  <text x="340" y="1282" font-family="Courier New" font-size="11" fill="#8b3a1c" text-anchor="middle" letter-spacing="2" transform="rotate(-1,340,1285)">POP-UP MUSEUM</text>
+  <line x1="230" y1="1298" x2="450" y2="1298" stroke="#c8b890" stroke-width="0.8" transform="rotate(-1,340,1285)"/>
+  <text x="340" y="1316" font-family="Courier New" font-size="10" fill="#4a4640" text-anchor="middle" transform="rotate(-1,340,1285)">ADI Design Museum · Milano · 2026</text>
+  <text x="340" y="1333" font-family="Courier New" font-size="9" fill="#8a7a6a" text-anchor="middle" transform="rotate(-1,340,1285)">ogni lunedì · 18–21 · ingresso libero</text>
+</g>
+
+</svg>
+</div>
+</body>
+</html><!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'archivio ritrovato — Pop-up Museum</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background-color:#f5f0e8;
+  background-image:url('bg.svg');
+  background-attachment:fixed;
+  background-size:cover;
+  background-position:center top;
+  font-family:'DM Mono',monospace;
+  overflow-x:hidden;
+}
+.shelf-wrap{width:100%;overflow:hidden}
+.card-link{cursor:pointer;transition:opacity .15s}
+.card-link:hover{opacity:.9}
 </style>
 </head>
 <body>
