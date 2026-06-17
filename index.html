@@ -11,7 +11,9 @@ html{width:100%;overflow-x:hidden}
 body{background-color:#f5f0e8;background-image:url('bg.svg');background-attachment:scroll;background-size:cover;background-position:center top;font-family:'Courier Prime','Courier New',monospace;overflow-x:hidden;}
 .shelf-wrap{width:100%;overflow:hidden}
 @media (max-width: 768px) {
-  .shelf-wrap{width:76.92%;transform:scale(1.3);transform-origin:top left}
+  body{overflow-x:auto}
+  html{overflow-x:auto}
+  .shelf-wrap{width:130%;overflow:visible}
 }
 .card-link{cursor:pointer;transition:opacity .15s}
 .card-link:hover{opacity:.85}
