@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>il pop-up museum — L'archivio ritrovato</title>
+<script>
+if (window.innerWidth > 768) {
+  window.location.replace('popup-museum.html');
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{width:100%;overflow-x:hidden}
+body{background-color:#f5f0e8;font-family:'Courier Prime','Courier New',monospace;overflow-x:hidden;}
+.shelf-wrap{width:100%;overflow:hidden}
+</style>
+</head>
+<body>
+<div class="shelf-wrap">
+<svg width="100%" viewBox="0 0 390 1300" xmlns="http://www.w3.org/2000/svg">
+<rect width="390" height="1300" fill="#f5f0e8"/>
+
+<!-- scaffale in cima con illustrazione appoggiata -->
+<rect x="42" y="86" width="186" height="186" fill="rgba(0,0,0,0.10)" rx="3"/>
+<rect x="38" y="82" width="186" height="186" fill="#faf6ed" stroke="#c8b890" stroke-width="1.5" rx="3"/>
+<circle cx="38" cy="82" r="5" fill="#c0392b"/>
+<circle cx="224" cy="82" r="5" fill="#c0392b"/>
+<circle cx="38" cy="268" r="5" fill="#c0392b"/>
+<circle cx="224" cy="268" r="5" fill="#c0392b"/>
+<svg x="53" y="97" width="156" height="156" viewBox="0 0 200 200" overflow="hidden">
+<rect width="200" height="200" fill="#f5e6c8"/>
+<ellipse cx="100" cy="160" rx="90" ry="14" fill="#000000" opacity="0.12"/>
+<rect x="20" y="110" width="160" height="50" fill="#e8b84b" rx="3"/>
+<rect x="20" y="110" width="160" height="8" fill="#c8a030" rx="3"/>
+<rect x="40" y="80" width="50" height="40" fill="#c0392b" rx="2"/>
+<rect x="40" y="80" width="50" height="8" fill="#962d22" rx="2"/>
+<rect x="100" y="70" width="42" height="50" fill="#3b82c4" rx="2"/>
+<rect x="100" y="70" width="42" height="8" fill="#2260a0" rx="2"/>
+<circle cx="155" cy="95" r="16" fill="#27ae60"/>
+<circle cx="155" cy="95" r="9" fill="#1a7a40"/>
+<rect x="55" y="125" width="9" height="20" rx="2" fill="#9b59b6"/>
+<circle cx="59" cy="121" r="6" fill="#9b59b6"/>
+<rect x="115" y="128" width="9" height="20" rx="2" fill="#f39c12"/>
+<circle cx="119" cy="124" r="6" fill="#f39c12"/>
+</svg>
+<rect x="0" y="280" width="390" height="9" fill="#c8a87a"/>
+<rect x="0" y="280" width="390" height="3" fill="#e2c48e"/>
+
+<!-- link back -->
+<a href="index-mobile.html"><text x="30" y="320" font-family="Courier Prime, monospace" font-size="13" fill="#8a7a6a" letter-spacing="1">← archivio</text></a>
+<line x1="30" y1="334" x2="360" y2="334" stroke="#c8b890" stroke-width="0.8"/>
+
+<!-- titolo -->
+<text x="195" y="380" font-family="Courier Prime, monospace" font-size="24" font-weight="700" fill="#1a1814" text-anchor="middle">il pop-up museum</text>
+<text x="195" y="450" font-family="Courier Prime, monospace" font-size="13" fill="#c0392b" text-anchor="middle">ADI Design Museum · Milano · 2026</text>
+<line x1="30" y1="450" x2="360" y2="450" stroke="#c8b890" stroke-width="0.8"/>
+
+<!-- corpo testo -->
+<foreignObject x="30" y="478" width="330" height="700">
+  <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:'Courier Prime','Courier New',monospace;font-size:15px;line-height:1.85;color:#1a1814;">Prima di trovare una casa definitiva, l'archivio esce allo scoperto.<br/><br/>
+Cinque serate all'ADI Design Museum di Milano, da luglio a settembre 2026. Ogni appuntamento esplora un tema — il calcio, la televisione, le grandi licenze, i prototipi, la guerra — con i giochi originali dell'archivio disponibili sui tavoli, i materiali consultabili liberamente, e Spartaco Albertarelli a raccontare.<br/><br/>
+L'ADI Design Museum è il luogo giusto: perché il gioco da tavolo è design, e perché è il posto dove il design italiano si conserva e si racconta.<br/><br/>
+Ingresso libero. Ogni lunedì, dalle 18 alle 21.</div>
+</foreignObject>
+
+<!-- footer -->
+<line x1="30" y1="1230" x2="360" y2="1230" stroke="#c8b890" stroke-width="0.4" stroke-dasharray="3,3"/>
+<text x="30" y="1252" font-family="Courier Prime, monospace" font-size="10" fill="#8a7a6a">L'archivio ritrovato · ADI Design Museum · Milano 2026</text>
+
+</svg>
+</div>
+</body>
+</html>

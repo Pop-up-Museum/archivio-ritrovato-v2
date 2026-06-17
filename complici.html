@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>I complici — L'archivio ritrovato</title>
+<script>
+if (window.innerWidth <= 768) {
+  window.location.replace('complici-mobile.html');
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -105,13 +110,5 @@ Il lavoro di Stefano e Luca è il contributo di ACME — Accademia di Belle Arti
 </svg>
 </div>
 </div>
-<script>
-if (window.innerWidth <= 768) {
-  var svg = document.querySelector('.shelf-wrap svg');
-  if (svg) {
-    svg.style.width = '130%';
-  }
-}
-</script>
 </body>
 </html>
